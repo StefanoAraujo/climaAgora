@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="climaApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-controller="climaCtrl">
+
+    <ion-pane>
+      <ion-header-bar class="bar-stable">
+        <h1 class="title">Clima Agora</h1>
+      </ion-header-bar>
+      <ion-content>
+          <ion-list>
+            <ion-item>
+                <h1>Cidade: {{cidade}}</h1>
+                <h1>ICONE do CLIMA</h1>
+                <h2>Descrição:</h2>
+                <h2>Minima/Máxima:</h2>
+                <h2>Umidade:</h2>
+                <h2>Pressao:</h2>
+                <h2>Latitude:</h2>
+                <h2>Longitude:</h2>
+            </ion-item>
+          </ion-list>
+      </ion-content>
+    </ion-pane>
+  </body>
+</html>
