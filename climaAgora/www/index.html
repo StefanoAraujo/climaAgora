@@ -15,6 +15,7 @@
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
 
+      <script src="js/ng-cordova.min.js"></script>
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
 
@@ -28,16 +29,18 @@
         <h1 class="title">Clima Agora</h1>
       </ion-header-bar>
       <ion-content>
+           <ion-refresher pulling-text="Recarregar Clima" on-refresh="reloadClima()">
+           </ion-refresher>
           <ion-list>
             <ion-item>
-                <h1>Cidade: {{cidade}}</h1>
-                <h1>ICONE do CLIMA</h1>
-                <h2>Descrição:</h2>
-                <h2>Minima/Máxima:</h2>
-                <h2>Umidade:</h2>
-                <h2>Pressao:</h2>
-                <h2>Latitude:</h2>
-                <h2>Longitude:</h2>
+                    <h1>{{sys_name}}</h1>
+                    <h1><img ng-src="{{temp_icon}}"/>{{temperatura}}°C</h1>
+                    <h2>Descrição: {{temp_description}}</h2>
+                    <h2>Mínima/Máxima: {{temp_min}}°C/{{temp_max}}°C </h2>
+                    <h2>Umidade: {{humidity}}</h2>
+                    <h2>Pressão: {{pressure}}</h2>
+                    <h3>Latitude: {{latitude}}</h3>
+                    <h3>Longitude: {{longitude}}</h3>
             </ion-item>
           </ion-list>
       </ion-content>
